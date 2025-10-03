@@ -8,10 +8,10 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3.0-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-[![Stars](https://img.shields.io/github/stars/Manojgowda898/url-shortener-advanced?style=for-the-badge&color=yellow)](https://github.com/Manojgowda898/url-shortener-advanced/stargazers)
-[![Forks](https://img.shields.io/github/forks/Manojgowda898/url-shortener-advanced?style=for-the-badge&color=blue)](https://github.com/Manojgowda898/url-shortener-advanced/network/members)
-[![Issues](https://img.shields.io/github/issues/Manojgowda898/url-shortener-advanced?style=for-the-badge&color=orange)](https://github.com/Manojgowda898/url-shortener-advanced/issues)
-[![Last Commit](https://img.shields.io/github/last-commit/Manojgowda898/url-shortener-advanced?style=for-the-badge&color=success)](https://github.com/Manojgowda898/url-shortener-advanced/commits/main)
+[![Stars](https://img.shields.io/github/stars/Manojgowda898/url-shortener-system?style=for-the-badge&color=yellow)](https://github.com/Manojgowda898/url-shortener-system/stargazers)
+[![Forks](https://img.shields.io/github/forks/Manojgowda898/url-shortener-system?style=for-the-badge&color=blue)](https://github.com/Manojgowda898/url-shortener-system/network/members)
+[![Issues](https://img.shields.io/github/issues/Manojgowda898/url-shortener-system?style=for-the-badge&color=orange)](https://github.com/Manojgowda898/url-shortener-system/issues)
+[![Last Commit](https://img.shields.io/github/last-commit/Manojgowda898/url-shortener-system?style=for-the-badge&color=success)](https://github.com/Manojgowda898/url-shortener-system/commits/main)
 
 </div>
 A production-ready URL shortener built with React + Vite, showcasing advanced algorithms and data structures with local development capabilities. 
