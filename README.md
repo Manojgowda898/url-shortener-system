@@ -279,8 +279,6 @@ exportToJSON(urls: Array): void
 
 ## 📊 Performance Metrics
 
-## 📊 Performance Metrics
-
 <div align="center">
 
 ### 🎯 Time & Space Complexity
