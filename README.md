@@ -116,8 +116,6 @@ npm run build
 
 ## 🔍 Algorithm Details
 
-<## 🔍 Algorithm Details
-
 <div align="center">
 
 ### 🏗️ Architecture & Performance
