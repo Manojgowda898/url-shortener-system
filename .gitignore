@@ -1,0 +1,96 @@
+# ============================================
+# DEPENDENCIES
+# ============================================
+node_modules/
+.pnp
+.pnp.js
+.pnp.loader.mjs
+.pnp.*
+
+# ============================================
+# BUILD OUTPUTS
+# ============================================
+dist/
+build/
+
+# ============================================
+# ENVIRONMENT VARIABLES
+# ============================================
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ============================================
+# LOGS
+# ============================================
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ============================================
+# RUNTIME & CACHE
+# ============================================
+.cache
+.parcel-cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+.eslintcache
+.stylelintcache
+
+# ============================================
+# COVERAGE & TESTING
+# ============================================
+coverage/
+*.lcov
+.nyc_output/
+
+# ============================================
+# IDE & EDITOR
+# ============================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ============================================
+# OPERATING SYSTEM
+# ============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ============================================
+# PACKAGE MANAGER SPECIFIC
+# ============================================
+.npm
+.yarn-integrity
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# ============================================
+# MISC
+# ============================================
+pids
+*.pid
+*.seed
+*.pid.lock
+.node_repl_history
+*.tgz
+tmp/
+temp/
