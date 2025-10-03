@@ -278,25 +278,23 @@ exportToJSON(urls: Array): void
 ---
 
 ## 📊 Performance Metrics
-## ⚡ Performance Metrics
+
+## 📊 Performance Metrics
 
 <div align="center">
 
-![URL Creation](https://img.shields.io/badge/URL_Creation-O(n)-success?style=flat-square)
-![URL Lookup](https://img.shields.io/badge/URL_Lookup-O(1)-brightgreen?style=flat-square)
-![Search](https://img.shields.io/badge/Search-O(k)-blue?style=flat-square)
-![Cache](https://img.shields.io/badge/Cache-O(1)-orange?style=flat-square)
+### 🎯 Time & Space Complexity
+
+| Operation | Performance Badge |
+|-----------|-------------------|
+| **Create URL** | ![O(n)](https://img.shields.io/badge/Time-O(n)-yellow?style=for-the-badge) ![O(n)](https://img.shields.io/badge/Space-O(n)-lightgrey?style=for-the-badge) |
+| **Lookup URL** | ![O(1)](https://img.shields.io/badge/Time-O(1)-brightgreen?style=for-the-badge) ![O(1)](https://img.shields.io/badge/Space-O(1)-lightgrey?style=for-the-badge) |
+| **Search URLs** | ![O(m)](https://img.shields.io/badge/Time-O(m)-blue?style=for-the-badge) ![O(1)](https://img.shields.io/badge/Space-O(1)-lightgrey?style=for-the-badge) |
+| **Click URL** | ![O(1)](https://img.shields.io/badge/Time-O(1)-brightgreen?style=for-the-badge) ![O(1)](https://img.shields.io/badge/Space-O(1)-lightgrey?style=for-the-badge) |
+| **Delete URL** | ![O(n)](https://img.shields.io/badge/Time-O(n)-yellow?style=for-the-badge) ![O(1)](https://img.shields.io/badge/Space-O(1)-lightgrey?style=for-the-badge) |
+| **Cache Access** | ![O(1)](https://img.shields.io/badge/Time-O(1)-brightgreen?style=for-the-badge) ![O(capacity)](https://img.shields.io/badge/Space-O(capacity)-orange?style=for-the-badge) |
 
 </div>
-
-| Operation | Time Complexity | Space Complexity |
-|-----------|----------------|------------------|
-| Create URL | O(n) | O(n) |
-| Lookup URL | O(1) | O(1) |
-| Search URLs | O(m) | O(1) |
-| Click URL | O(1) | O(1) |
-| Delete URL | O(n) | O(1) |
-| Cache Access | O(1) | O(capacity) |
 
 Where:
 - n = URL length
