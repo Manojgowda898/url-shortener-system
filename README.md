@@ -299,28 +299,32 @@ Where:
 - m = search query length
 
 ---
-
 ## 📸 Screenshots & Demo
-* ### Dashboard Overview 
-![Dashboard Overview](src/assets/screenshots/dashboard-overview.png)
 
-* ### URL Shortening Process 
-![URL Shortening Process ](src/assets/screenshots/url-shortening.png)
+<div align="center">
 
-* ### Search & Filter Functionality 
-![Search & Filter Functionality](src/assets/screenshots/search-filter.png)
+### 🖥️ Dashboard Overview
+![Dashboard](src/assets/screenshots/dashboard-overview.png)
 
-* ### Analytics & Click Tracking 
-![Analytics & Click Tracking](assets/screenshots/analytics.png)
+### 🔗 URL Shortening Process  
+![URL Shortening](src/assets/screenshots/url-shortening.png)
 
-* ### Mobile Responsive Design 
-![Mobile Responsive Design](assets/screenshots/mobile-view.png)
+### 🔍 Search & Filter Functionality
+![Search](src/assets/screenshots/search-filter.png)
 
-* ### Live Demo 
-![Live Demo](assets/screenshots/demo.gif)
+### 📊 Analytics & Click Tracking
+![Analytics](src/assets/screenshots/analytics.png)
 
-* ### Export Functionality 
-[View CSV Export Example](assets/screenshots/dashboard.png)
+### 📱 Mobile Responsive Design
+![Mobile](src/assets/screenshots/mobile-view.png)
+
+### 🎥 Live Demo
+![Demo](src/assets/screenshots/demo.gif)
+
+### 📤 Export Functionality
+[View CSV Export Example](src/assets/screenshots/export.csv)
+
+</div>
 
 ---
 
