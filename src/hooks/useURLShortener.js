@@ -228,79 +228,89 @@ export const useURLShortener = () => {
     return () => clearInterval(interval);
   }, []);
 
-  /**
-   * Create shortened URL
-   */
-  const createShortUrl = (longUrl, customCode = '', expiryDays = '') => {
-    setError('');
+ /**
+ * Create shortened URL
+ */
+const createShortUrl = (longUrl, customCode = '', expiryDays = '') => {
+  setError('');
 
-    // Validation
-    if (!longUrl.trim()) {
-      setError('Please enter a URL');
+  // Validation
+  if (!longUrl.trim()) {
+    setError('Please enter a URL');
+    return null;
+  }
+
+  if (!isValidUrl(longUrl)) {
+    setError('Please enter a valid URL with http:// or https://');
+    return null;
+  }
+
+  let shortCode = customCode.trim();
+
+  // Validate custom code
+  if (shortCode) {
+    if (!isValidCustomCode(shortCode)) {
+      if (shortCode.length < 3) {
+        setError('Custom code must be at least 3 characters long');
+      } else if (shortCode.length > 40) {
+        setError('Custom code cannot exceed 40 characters');
+      } else if (!/^[a-zA-Z0-9]/.test(shortCode)) {
+        setError('Custom code must start with a letter or number');
+      } else if (!/[a-zA-Z0-9]$/.test(shortCode)) {
+        setError('Custom code must end with a letter or number');
+      } else {
+        setError('Custom code can only contain letters, numbers, hyphens, and underscores');
+      }
       return null;
     }
-
-    if (!isValidUrl(longUrl)) {
-      setError('Please enter a valid URL with http:// or https://');
+    if (urlMap.has(shortCode)) {
+      setError('Custom code already taken');
       return null;
     }
-
-    let shortCode = customCode.trim();
-
-    // Validate custom code
-    if (shortCode) {
-      if (!isValidCustomCode(shortCode)) {
-        setError('Custom code must be 3-10 alphanumeric characters');
-        return null;
-      }
-      if (urlMap.has(shortCode)) {
-        setError('Custom code already taken');
-        return null;
-      }
-    } else {
-      // Check for existing URL
-      const existing = Array.from(urlMap.values()).find(u => u.long === longUrl);
-      if (existing) {
-        setError('URL already shortened!');
-        return null;
-      }
-      shortCode = generateShortCode(longUrl);
+  } else {
+    // Check for existing URL
+    const existing = Array.from(urlMap.values()).find(u => u.long === longUrl);
+    if (existing) {
+      setError('URL already shortened!');
+      return null;
     }
+    shortCode = generateShortCode(longUrl);
+  }
 
-    // Create URL object
-    const now = new Date();
-    const expiresAt = expiryDays 
-      ? new Date(now.getTime() + parseInt(expiryDays) * 24 * 60 * 60 * 1000) 
-      : null;
+  // Create URL object
+  const now = new Date();
+  const expiresAt = expiryDays 
+    ? new Date(now.getTime() + parseInt(expiryDays) * 24 * 60 * 60 * 1000) 
+    : null;
 
-    const newUrl = {
-      id: Date.now(),
-      long: longUrl,
-      short: `http://localhost:5173/#/r/${shortCode}`,
-      code: shortCode,
-      clicks: 0,
-      clickHistory: [],
-      created: now.toISOString(),
-      expiresAt: expiresAt?.toISOString()
-    };
-
-    // Add to data structures
-    urlMap.set(shortCode, newUrl);
-    setUrlMap(new Map(urlMap));
-    
-    // Index the URL in Trie for search
-    indexUrlInTrie(newUrl, trie);
-
-    setUrls(prevUrls => [newUrl, ...prevUrls]);
-    setStats(prev => ({ 
-      ...prev, 
-      total: prev.total + 1,
-      active: prev.active + 1
-    }));
-
-    console.log('➕ Created new short URL:', newUrl.short);
-    return newUrl;
+  const newUrl = {
+    id: Date.now(),
+    long: longUrl,
+    short: `http://localhost:5173/#/r/${shortCode}`,
+    code: shortCode,
+    clicks: 0,
+    clickHistory: [],
+    created: now.toISOString(),
+    expiresAt: expiresAt?.toISOString()
   };
+
+  // Add to data structures
+  urlMap.set(shortCode, newUrl);
+  setUrlMap(new Map(urlMap));
+  
+  // Index the URL in Trie for search
+  indexUrlInTrie(newUrl, trie);
+
+  setUrls(prevUrls => [newUrl, ...prevUrls]);
+  setStats(prev => ({ 
+    ...prev, 
+    total: prev.total + 1,
+    active: prev.active + 1
+  }));
+
+  console.log('➕ Created new short URL:', newUrl.short);
+  return newUrl;
+};
 
   /**
    * Handle URL click (redirect)

@@ -302,13 +302,13 @@ Where:
 
 ## 📸 Screenshots & Demo
 * ### Dashboard Overview 
-![Dashboard Overview](assets/screenshots/dashboard-overview.png)
+![Dashboard Overview](src/assets/screenshots/dashboard-overview.png)
 
 * ### URL Shortening Process 
-![URL Shortening Process ](assets/screenshots/url-shortening.png)
+![URL Shortening Process ](src/assets/screenshots/url-shortening.png)
 
 * ### Search & Filter Functionality 
-![Search & Filter Functionality](assets/screenshots/search-filter.png)
+![Search & Filter Functionality](src/assets/screenshots/search-filter.png)
 
 * ### Analytics & Click Tracking 
 ![Analytics & Click Tracking](assets/screenshots/analytics.png)

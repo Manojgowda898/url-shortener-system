@@ -74,7 +74,7 @@ export const isValidCustomCode = (code) => {
   // Allow: 3 to 20 characters
   // Allow: letters (a-z, A-Z), numbers (0-9), hyphens (-), underscores (_)
   // Must start and end with letter or number (no hyphens/underscores at ends)
-  return /^[a-zA-Z0-9][a-zA-Z0-9_-]{1,18}[a-zA-Z0-9]$/.test(code);
+  return /^[a-zA-Z0-9][a-zA-Z0-9_-]{1,38}[a-zA-Z0-9]$/.test(code);
 };
 
 /**
