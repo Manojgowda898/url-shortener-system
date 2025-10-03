@@ -78,7 +78,7 @@ src/
 
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone https://github.com/Manojgowda898/url-shortener-system
 cd url-shortener
 # Install dependencies
 npm install
@@ -116,7 +116,10 @@ npm run build
 
 ## 🔍 Algorithm Details
 
+<div align="center">
 ![HashMap](https://img.shields.io/badge/HashMap-O(1)_Lookup-FF6B6B?style=flat-square)![LRU Cache](https://img.shields.io/badge/LRU_Cache-O(1)_Access-4ECDC4?style=flat-square)![Trie](https://img.shields.io/badge/Trie-O(k)_Search-45B7D1?style=flat-square)![Base62](https://img.shields.io/badge/Base62-Encoding-96CEB4?style=flat-square)![Hashing](https://img.shields.io/badge/Polynomial_Hash-O(n)-FECA57?style=flat-square)
+</div>
+
 ### Hash Function
 
 ```javascript
@@ -336,27 +339,16 @@ Where:
 
 ## 🚀 Future Enhancements
 
-- [ ] User authentication
-- [ ] Database persistence (MongoDB/PostgreSQL)
-- [ ] Rate limiting
-- [ ] Custom domains
-- [ ] Bulk URL import
-- [ ] Advanced analytics (geographic, device, browser)
-- [ ] API endpoints
-- [ ] URL preview before redirect
-- [ ] Password-protected URLs
-- [ ] Link grouping/folders
-
----
-## 📜 License
-
-This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) before submitting issues or pull requests.
+- User authentication
+- Database persistence (MongoDB/PostgreSQL)
+- Rate limiting
+- Custom domains
+- Bulk URL import
+- Advanced analytics (geographic, device, browser)
+- API endpoints
+- URL preview before redirect
+- Password-protected URLs
+- Link grouping/folders
 
 ---
 
@@ -375,5 +367,15 @@ Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTIN
 - HashMap: For O(1) lookups using JavaScript Map
 - Base62 Encoding: For compact URL short code generation
 - Polynomial Rolling Hash: For efficient URL hashing
+---
+## 📜 License
+
+This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) before submitting issues or pull requests.
 
 ---
