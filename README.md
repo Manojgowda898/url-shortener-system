@@ -116,13 +116,19 @@ npm run build
 
 ## 🔍 Algorithm Details
 
+<## 🔍 Algorithm Details
+
 <div align="center">
 
-![HashMap](https://img.shields.io/badge/HashMap-O(1)_Lookup-FF6B6B?style=flat-square) &nbsp;
-![LRU Cache](https://img.shields.io/badge/LRU_Cache-O(1)_Access-4ECDC4?style=flat-square) &nbsp;
-![Trie](https://img.shields.io/badge/Trie-O(k)_Search-45B7D1?style=flat-square) &nbsp;
-![Base62](https://img.shields.io/badge/Base62-Encoding-96CEB4?style=flat-square) &nbsp;
-![Hashing](https://img.shields.io/badge/Polynomial_Hash-O(n)-FECA57?style=flat-square)
+### 🏗️ Architecture & Performance
+
+| Data Structure | Time Complexity | Implementation |
+|---------------|----------------|----------------|
+| ![HashMap](https://img.shields.io/badge/HashMap-FF6B6B?style=flat-square) | O(1) Lookup | JavaScript Map |
+| ![LRU Cache](https://img.shields.io/badge/LRU_Cache-4ECDC4?style=flat-square) | O(1) Access | Custom Class |
+| ![Trie](https://img.shields.io/badge/Trie-45B7D1?style=flat-square) | O(k) Search | Prefix Tree |
+| ![Base62](https://img.shields.io/badge/Base62-96CEB4?style=flat-square) | O(log n) | Encoding |
+| ![Hashing](https://img.shields.io/badge/Hashing-FECA57?style=flat-square) | O(n) | Polynomial Hash |
 
 </div>
 
