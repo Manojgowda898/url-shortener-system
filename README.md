@@ -120,13 +120,13 @@ npm run build
 
 ### 🏗️ Architecture & Performance
 
-| Data Structure | Time Complexity | Implementation |
-|---------------|----------------|----------------|
-| ![HashMap](https://img.shields.io/badge/HashMap-FF6B6B?style=flat-square) | O(1) Lookup | JavaScript Map |
-| ![LRU Cache](https://img.shields.io/badge/LRU_Cache-4ECDC4?style=flat-square) | O(1) Access | Custom Class |
-| ![Trie](https://img.shields.io/badge/Trie-45B7D1?style=flat-square) | O(k) Search | Prefix Tree |
-| ![Base62](https://img.shields.io/badge/Base62-96CEB4?style=flat-square) | O(log n) | Encoding |
-| ![Hashing](https://img.shields.io/badge/Hashing-FECA57?style=flat-square) | O(n) | Polynomial Hash |
+| Data Structure | Time Complexity | Implementation | Use Case |
+|---------------|----------------|----------------|----------|
+| **HashMap** | O(1) Lookup | JavaScript Map | URL lookup by short code |
+| **LRU Cache** | O(1) Access | Custom Class | Frequently accessed URLs |
+| **Trie** | O(k) Search | Prefix Tree | Search by URL/code prefixes |
+| **Base62** | O(log n) | Encoding Algorithm | Short code generation |
+| **Polynomial Hash** | O(n) | Rolling Hash Function | URL hashing with prime 31 |
 
 </div>
 
@@ -285,14 +285,14 @@ exportToJSON(urls: Array): void
 
 ### 🎯 Time & Space Complexity
 
-| Operation | Performance Badge |
-|-----------|-------------------|
-| **Create URL** | ![O(n)](https://img.shields.io/badge/Time-O(n)-yellow?style=for-the-badge) ![O(n)](https://img.shields.io/badge/Space-O(n)-lightgrey?style=for-the-badge) |
-| **Lookup URL** | ![O(1)](https://img.shields.io/badge/Time-O(1)-brightgreen?style=for-the-badge) ![O(1)](https://img.shields.io/badge/Space-O(1)-lightgrey?style=for-the-badge) |
-| **Search URLs** | ![O(m)](https://img.shields.io/badge/Time-O(m)-blue?style=for-the-badge) ![O(1)](https://img.shields.io/badge/Space-O(1)-lightgrey?style=for-the-badge) |
-| **Click URL** | ![O(1)](https://img.shields.io/badge/Time-O(1)-brightgreen?style=for-the-badge) ![O(1)](https://img.shields.io/badge/Space-O(1)-lightgrey?style=for-the-badge) |
-| **Delete URL** | ![O(n)](https://img.shields.io/badge/Time-O(n)-yellow?style=for-the-badge) ![O(1)](https://img.shields.io/badge/Space-O(1)-lightgrey?style=for-the-badge) |
-| **Cache Access** | ![O(1)](https://img.shields.io/badge/Time-O(1)-brightgreen?style=for-the-badge) ![O(capacity)](https://img.shields.io/badge/Space-O(capacity)-orange?style=for-the-badge) |
+| Operation | Time Complexity | Space Complexity | Description |
+|-----------|----------------|------------------|-------------|
+| **Create URL** | O(n) | O(n) | Hash generation + Base62 encoding |
+| **Lookup URL** | O(1) | O(1) | HashMap instant access |
+| **Search URLs** | O(m) | O(1) | Trie prefix-based search |
+| **Click URL** | O(1) | O(1) | Analytics tracking & redirection |
+| **Delete URL** | O(n) | O(1) | Remove from all data structures |
+| **Cache Access** | O(1) | O(capacity) | LRU cache operations |
 
 </div>
 
